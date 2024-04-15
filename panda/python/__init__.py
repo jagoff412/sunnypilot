@@ -199,9 +199,6 @@ class Panda:
   FLAG_TOYOTA_LTA = (4 << 8)
   FLAG_TOYOTA_GAS_INTERCEPTOR = (8 << 8)
 
-  FLAG_TOYOTA_SDSU = (64 << 8)
-  FLAG_TOYOTA_UNSUPPORTED_DSU_CAR = (128 << 8)
-
   FLAG_HONDA_ALT_BRAKE = 1
   FLAG_HONDA_BOSCH_LONG = 2
   FLAG_HONDA_NIDEC_ALT = 4
@@ -220,7 +217,6 @@ class Panda:
   FLAG_HYUNDAI_LFA_BTN = 256
   FLAG_HYUNDAI_ESCC = 512
   FLAG_HYUNDAI_NON_SCC = 1024
-  FLAG_HYUNDAI_UPSTREAM_TACO = 2048
 
   FLAG_TESLA_POWERTRAIN = 1
   FLAG_TESLA_LONG_CONTROL = 2
@@ -236,8 +232,6 @@ class Panda:
 
   FLAG_SUBARU_PREGLOBAL_REVERSED_DRIVER_TORQUE = 1
 
-  FLAG_SUBARU_SNG = 1024
-
   FLAG_NISSAN_ALT_EPS_BUS = 1
 
   FLAG_GM_HW_CAM = 1
@@ -245,6 +239,8 @@ class Panda:
 
   FLAG_FORD_LONG_CONTROL = 1
   FLAG_FORD_CANFD = 2
+
+  FLAG_TOYOTA_MADS_LTA_MSG = 1
 
   def __init__(self, serial: str | None = None, claim: bool = True, disable_checks: bool = True, can_speed_kbps: int = 500):
     self._connect_serial = serial
