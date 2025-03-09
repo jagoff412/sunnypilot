@@ -5,7 +5,7 @@ import signal
 import sys
 import traceback
 
-from cereal import log
+from cereal import log, custom
 import cereal.messaging as messaging
 import openpilot.system.sentry as sentry
 from openpilot.common.params import Params, ParamKeyType
@@ -55,9 +55,11 @@ def manager_init() -> None:
     ("ModelManager_ModelsCache", ""),
     ("NeuralNetworkLateralControl", "0"),
     ("QuietMode", "0"),
-    ("CustomAccIncrementsEnabled", "0"),
-    ("CustomAccLongPressIncrement", "5"),
-    ("CustomAccShortPressIncrement", "1"),
+    ("ToyotaAutoHold", "0"),
+    ("ToyotaEnhancedBsm", "0"),
+    ("ToyotaTSS2Long", "0"),
+    ("AccelPersonality", str(custom.LongitudinalPlanSP.AccelerationPersonality.stock)),
+    ("DynamicPersonality", "0"),
   ]
 
   if params.get_bool("RecordFrontLock"):

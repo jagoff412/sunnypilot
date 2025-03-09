@@ -176,4 +176,8 @@ inline static std::unordered_map<std::string, uint32_t> keys = {
     {"HyundaiRadarTracksToggle", PERSISTENT},
 
     {"DynamicExperimentalControl", PERSISTENT},
+
+    // toyota specific params
+    {"AccelPersonality", PERSISTENT},
+    {"DynamicPersonality", PERSISTENT},
 };
