@@ -12,8 +12,14 @@ CUSTOM_MODEL_PATH = Paths.model_root()
 
 
 # Set QCOM environment variable for TICI devices, potentially enabling hardware acceleration
-if TICI:
+USBGPU = "USBGPU" in os.environ
+if USBGPU:
+  os.environ['AMD'] = '1'
+elif TICI:
   os.environ['QCOM'] = '1'
+else:
+  os.environ['LLVM'] = '1'
+  os.environ['JIT'] = '2'
 
 class ModelData:
   """
