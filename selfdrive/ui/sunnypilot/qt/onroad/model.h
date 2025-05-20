@@ -23,6 +23,6 @@ private:
   void drawLead(QPainter &painter, const cereal::RadarState::LeadData::Reader &lead_data, const QPointF &vd, const QRect &surface_rect);
 
   float hysteretic_x = 0.0f;
-  const float hysteresis_factor = 0.4f;
+  const float hysteresis_factor = 0.3f;
   Params params;
 };
