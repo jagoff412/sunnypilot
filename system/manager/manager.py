@@ -55,9 +55,9 @@ def manager_init() -> None:
     ("ModelManager_ModelsCache", ""),
     ("NeuralNetworkLateralControl", "0"),
     ("QuietMode", "0"),
-    ("ToyotaAutoHold", "0"),
-    ("ToyotaEnhancedBsm", "0"),
-    ("ToyotaTSS2Long", "0"),
+    ("CustomAccIncrementsEnabled", "0"),
+    ("CustomAccLongPressIncrement", "5"),
+    ("CustomAccShortPressIncrement", "1"),
     ("AccelPersonality", str(custom.LongitudinalPlanSP.AccelerationPersonality.stock)),
     ("DynamicPersonality", "0"),
   ]
